@@ -2,3 +2,34 @@
 	margin: 0;
 	padding: 0;
 }
+input{
+	display: none;
+}
+body{
+	overflow: hidden;
+	background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+.meme-slider__container{
+	width: 100vw;
+	height: 100vh;
+}
+.slides__container{
+	margin: 2% 0 2% 0;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 1s;
+}
+.slides__box{
+	width: 50vw;
+	overflow: hidden;
+}
+.slides{
+	width: 50vw;
+	display: flex;
+}
+.slides img{
+	width: 100%;
+	transition: all 1s;
+}
