@@ -2,12 +2,19 @@
 	margin: 0;
 	padding: 0;
 }
+@media (max-width:1024px){
+	.wrapper{
+		justify-content: center;
+		align-items:center;
+		flex-direction: column;
+	}
+}
 input{
 	display: none;
 }
 body{
 	overflow: hidden;
-	background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+	background-color: aquamarine;
 }
 .meme-slider__container{
 	width: 100vw;
@@ -29,7 +36,96 @@ body{
 	width: 50vw;
 	display: flex;
 }
-.slides img{
+.slides .meme{
 	width: 100%;
 	transition: all 1s;
+}
+.wrapper{
+	margin-top: 5%;
+	width: 50vw;
+	display: flex;
+	flex-direction: row-reverse;
+	margin: auto;
+}
+.text__container{
+	width: 50vw;
+}
+.caption__box{
+	width: 45vw;
+	overflow: hidden;
+}
+.captions{
+	padding-top: 1rem;
+	width: 178vw;
+	display: flex;
+	margin: auto;
+	font-family: "Annai MN", sans-serif;
+}
+.caption{
+	text-align: center;
+	width:100%;
+	font-size: 2rem;
+}
+.label__container{
+	display: flex;
+}
+.label__container label{
+	width: 1rem;
+	height: 2rem;
+	padding: 1rem;
+}
+/*----buttons-decoration-----------*/
+.label__container label span{
+	display: inline-block;
+	width: 1.5rem;
+	height: 1.5rem;
+	background-color: green;
+	border-radius:50%;
+	margin-right: 2rem;
+	border: 0.1rem solid rgb(32, 91, 39);
+}
+.label__container label:hover{
+	cursor: pointer;
+}
+.label__container label span:hover{
+	cursor: pointer;
+	background-color:olive;
+}
+#btn-1:checked ~ .wrapper label:nth-child(1) span,
+#btn-2:checked ~ .wrapper label:nth-child(2) span,
+#btn-3:checked ~ .wrapper label:nth-child(3) span,
+#btn-4:checked ~ .wrapper label:nth-child(4) span{
+	background-color:rgb(187, 242, 204);
+}
+/*---img-slider----------*/
+#btn-1:checked ~ .slides__container .slides{
+	margin-left: 0%;
+}
+#btn-2:checked ~ .slides__container .slides{
+	margin-left: -100%;
+}
+#btn-3:checked ~ .slides__container .slides{
+	margin-left: -200%;
+}
+#btn-4:checked ~ .slides__container .slides{
+	margin-left: -300%;
+}
+.slides__container .slides{
+	transition: all 500ms;
+}
+/* ---text-slider-------------------------------------------- */
+#btn-1:checked ~ .wrapper .captions{
+	margin-left: 0%;
+}
+#btn-2:checked ~ .wrapper .captions{
+	margin-left: -100%;
+}
+#btn-3:checked ~ .wrapper .captions{
+	margin-left: -200%;
+}
+#btn-4:checked ~ .wrapper .captions{
+	margin-left: -300%;
+}
+.wrapper .captions{
+	transition: all 500ms;
 }
