@@ -10,7 +10,8 @@
 	}
 }
 input{
-	display: none;
+	position: absolute;
+	visibility: hidden;
 }
 body{
 	overflow: hidden;
