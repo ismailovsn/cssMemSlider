@@ -91,6 +91,13 @@ body{
 #btn-4:checked ~ .wrapper label:nth-child(4) span{
 	background-color:rgb(187, 242, 204);
 }
+#btn-1:checked ~ .wrapper label:nth-child(1) span:hover,
+#btn-2:checked ~ .wrapper label:nth-child(2) span:hover,
+#btn-3:checked ~ .wrapper label:nth-child(3) span:hover,
+#btn-4:checked ~ .wrapper label:nth-child(4) span:hover{
+	background-color: rgb(51, 75, 51);
+	border-color: rgb(0, 0, 0);
+}
 /*---img-slider----------*/
 #btn-1:checked ~ .slides__container .slides{
 	margin-left: 0%;
@@ -128,5 +135,8 @@ body{
 		justify-content: center;
 		align-items:center;
 		flex-direction: column;
+	}
+	.caption {
+		font-size: 1rem;
 	}
 }
