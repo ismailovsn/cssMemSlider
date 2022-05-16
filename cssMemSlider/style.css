@@ -2,13 +2,6 @@
 	margin: 0;
 	padding: 0;
 }
-@media (max-width:1024px){
-	.wrapper{
-		justify-content: center;
-		align-items:center;
-		flex-direction: column;
-	}
-}
 input{
 	position: absolute;
 	visibility: hidden;
@@ -129,4 +122,11 @@ body{
 }
 .wrapper .captions{
 	transition: all 500ms;
+}
+@media (max-width:1024px){
+	.wrapper{
+		justify-content: center;
+		align-items:center;
+		flex-direction: column;
+	}
 }
